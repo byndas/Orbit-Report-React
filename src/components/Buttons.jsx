@@ -1,9 +1,10 @@
 const Buttons = ({ filterByType, setSat, displaySats }) => {
   return (
     <div>
-      <button>Low Orbit</button>
+      {/* <button>Low Orbit</button>
       <button>Medium Orbit</button>
-      <button>High Orbit</button>
+      <button>High Orbit</button> */}
+      <button>PLACEHOLDER BUTTON</button>
       <button>All Orbits</button>
     </div>
   );

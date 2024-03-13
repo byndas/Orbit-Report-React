@@ -1,15 +1,43 @@
+import useState from "react";
+import satData from "./components/satData";
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
-import Banner from "./components/Banner"
+import Banner from "./components/Banner";
 
 
 function App() {
+  //  sat compares state changes
+  //  setSat updates state
+  const [sat, setSat] = useState(satData);
+  //  Set() method prevents duplicate button elements
+  const displaySats = [...new Set(satData.map((data) => data.orbitType))];
+  //  ---------------------------------------
+  //  const filterByType = (currentType) => {
+  //   //  updates displaySats via .filter()
+  //   function newSatDisplay() {
+  //     return newSatDisplay.orbitType === currentType;
+  //   }
+  //   displaySats.filter(newSatDisplay);
+// ----------------------------------------
+    const filterByType = (currentType) => {
+
+      const displaySats = satData.filter((newSatDisplay) => {
+         return newSatDisplay.orbitType === currentType;
+      });
+
+      setSat(displaySats);
+   };
+
   return (
-    <div>
+    <>
       <Banner />
-      <Buttons />
-      <Table />
-    </div>
+      <Buttons
+        filterByType={filterByType}
+        setSat={setSat}
+        displaySats={displaySats}
+      />
+      <Table sat={sat} />
+    </>
   );
 }
 
