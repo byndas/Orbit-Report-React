@@ -14,19 +14,21 @@ function App() {
 export default App;
 
 /*
-create components to render a searchable, sortable table of satellites
-    via button-click-handling connective function
+create components that render a searchable, sortable table of satellites
+    via button-click-handling connective functions
 
-create table showing satellites with orbit paths: Low, Medium, or High
+table shows satellites with Low, Medium, High, or All orbit paths
 
 NEED:
   banner introducing project & providing app instructions
 
-  table that renders satellite info depending on orbit path:
-    NAME -- SATELLITE TYPE -- LAUNCH DATE -- STATUS
+  table columns:
+    NAME -- SATELLITE TYPE -- LAUNCH DATE (YEAR-MONTH-DATE || N/A) -- STATUS (ACTIVE || INACTIVE)
 
   four satellite-rendering buttons:
     on button-click, table renders LOW, MEDIUM, HIGH or ALL orbit path satellites
+
+  satellite class component for satelittes of each orbit path to inherit
 
   presentable styling
 */
