@@ -1,5 +1,4 @@
 import satData from "./satData";
-// import App from "../App";
 
 const Buttons = ({ filterByType, setSat, displaySats }) => {
   // makes first three buttons, one for each orbit type
