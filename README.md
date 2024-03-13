@@ -1,5 +1,5 @@
 ----------------------------
-Wednesday:  REACT EXERCIZES!
+Wednesday:  REACT EXERCISES!
 Thursday:   BEGIN   PROJECT #6
 ----------------------------
 Friday:     
