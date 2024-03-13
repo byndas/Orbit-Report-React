@@ -1,3 +1,18 @@
+----------------------------
+Wednesday:  REACT EXERCIZES!
+Thursday:   BEGIN   PROJECT #6
+----------------------------
+Friday:     
+Saturday:   
+Sunday:     
+----------------------------
+Monday:     
+Tuesday:    
+Wednesday:  
+Thursday:   END   PROJECT #6
+----------------------------
+
+
 # Graded Assignment 6: Orbit Report
 
 Using Node 18.16.10
@@ -19,7 +34,7 @@ Using Node 18.16.10
 ## Running the Unit Tests
 The final task of the assignment is to run the unit tests.
 
-However, the autograding tests will run every time you push your work up to your GitHub repo.  The autograded tests are in a single workflow, so you will not pass this workflow until you've completed the entire project.  
+However, the autograding tests will run every time you push your work up to your GitHub repo.  The autograded tests are in a single workflow, so you will not pass this workflow until you've completed the entire project.
 
 ### Running a workflow with GitHub Actions
 Before you review your code with your TA, check on the status of your workflow.  To do this, follow [GitHub's guide on manually running a walkthrough](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow).  This guide will explain the following:
@@ -28,19 +43,19 @@ Before you review your code with your TA, check on the status of your workflow. 
 3. How to investigate a failed test
 4. How to rerun tests
 
-### To Run the tests within your project 
+### To Run the tests within your project
 If you like to check your progress incrementally as you work, you can run the tests in your terminal between each section.  Again, since the tests are in a single test file, you will not pass all of the tests until you've completed your project.
 
-To test your code in the terminal before you push it up to GitHub, use these steps: 
+To test your code in the terminal before you push it up to GitHub, use these steps:
   1. Inside the project directory, run the following commands to start the tests: `npm test`
-     
+
   You should see the following if you run the tests _BEFORE_ completing the assignment:
-  
+
   <img width="50%" alt="starting unit tests" src="https://github.com/LaunchCodeEducation/orbitReport-React/assets/66076696/9abae38b-971a-41df-b34d-cd75aee1b81a">
 
   If you are running this between tasks, you should see that some of your tests pass while others do not depending on your progress.
 
-  If your code behaves as expected by the last task, you should pass all the unit tests and see this: 
+  If your code behaves as expected by the last task, you should pass all the unit tests and see this:
     <img width="50%" alt="passing unit tests" src="https://github.com/LaunchCodeEducation/orbitReport-React/assets/66076696/b0cf1c1f-4ba8-4553-968d-040538c64c9b">
 
 ### Troubleshooting
