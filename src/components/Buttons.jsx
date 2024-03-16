@@ -1,15 +1,20 @@
 import satData from "./satData";
 
 const Buttons = ({ filterByType, setSat, displaySats }) => {
-  // makes first three buttons, one for each orbit type
-  displaySats.map((sat, id) => {
+  // makes buttons for each orbit type
+  const orbitPathBtns = displaySats.map((sat, index) => {
     return (
-      <button onClick={() => filterByType(sat)} key={id}>
+      <button onClick={() => filterByType(sat)} key={index}>
         {sat} Orbit
       </button>
     );
-  });
-  return <button onClick={() => setSat(satData)}>All Orbits</button>
+  })
+  return (
+    <div className="flex-container">
+      {orbitPathBtns}
+      <button onClick={() => setSat(satData)}>All Orbits</button>
+    </div>
+  );
 };
 
 export default Buttons;
