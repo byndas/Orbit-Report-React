@@ -21,6 +21,10 @@ button:hover {
   border-color: darkred;
 }
 
+.active-btn {
+    background-color: darkred;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
