@@ -1,68 +1,152 @@
-h1,
-p {
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
 button {
-  background-color: #5c94ce;
+  background: transparent;
   border-radius: 15px;
-  color: white;
+  color: silver;
   padding: 15px 32px;
   margin: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: bold;
+  opacity: .7;
+  transition: opacity 250ms ease-in-out;
+  z-index: 10;
 }
 
 button:hover {
-  border-color: darkred;
+  opacity: 1;
+  border-color: rgba(148,187,233,1);
+  z-index: 10;
 }
 
 .active-btn {
-    background-color: darkred;
+    background-color: white;
+    opacity: .8;
+}
+
+.active {
+  color: palegreen;
+}
+
+.inactive {
+  color: firebrick;
+}
+
+.communication {
+  color: rgb(68, 0, 114);
+}
+
+.positioning {
+  color: rgb(244, 236, 124);
+}
+
+.probe {
+  color: pink;
+}
+
+.space-station {
+  color: paleturquoise;
+}
+
+.telescope {
+  color: rgb(1, 1, 186);
 }
 
 .flex-container {
   display: flex;
   justify-content: center;
+  opacity: .8;
 }
 
 table {
-  border: 2px solid #354a5f;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 100vw;
+  height: 100%;
 }
 
 th {
-  border-bottom: 2px solid #354a5f;
-  padding: 8px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #354a5f;
-  color: white;
+  border-bottom: 2px solid rgb(238,174,202);
+  padding: .5%;
+  background-color: rgb(8, 16, 24);
+  color: silver;
   text-align: center;
+  font-size: 30px;
+  opacity: .8;
 }
-tr:nth-child(even) {
-  background-color: #ddd;
-}
+
 tr:hover {
-  background-color: #cacacb;
+  background-color: snow;
+  opacity: 1;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .7;
+  }
+}
+
+tr {
+  opacity: .7;
+  animation: fade-in 1.25s;
 }
 
 td {
   text-align: center;
-  padding: 8px;
+  font-size: 21px;
+  padding: .5%;
+  width: 25vw;
 }
 
 header {
-  padding: 50px;
-  text-align: center;
-  background: #5c94ce;
-  color: white;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  padding: .5%;
+  color: silver;
+  opacity: .8;
   font-size: 60px;
+  text-align: center;
+}
+
+
+.header {
+  background-color: #5c94ce;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+@keyframes drift-right {
+  50% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes drift-left {
+  50% {
+    transform: translateX(100vw);
+  }
+}
+
+.header img {
+  position: absolute;
+  background-blend-mode: darken;
+}
+
+#moon {
+  right: 70vw;
+  height: 25vw;
+  opacity: .35;
+  animation: drift-left 600s linear infinite;
+}
+
+#satellite {
+  left: 80vw;
+  top: -1.5vh;
+  height: 15vw;
+  opacity: .25;
+  animation: drift-right 600s linear infinite;
 }

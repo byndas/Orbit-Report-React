@@ -3,33 +3,49 @@ import satData from "./components/satData";
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
 import Banner from "./components/Banner";
+
+import moon from "./orbitPhotos/moon.png";
+import satellite from "./orbitPhotos/satellite.png";
+
 import "./styling.css";
 
 function App() {
-  //  sat compares state changes
-  //  setSat updates state
+  //  sat compares with imported satData object for changes
+  //  setSat updates satData object with changes
   const [sat, setSat] = useState(satData);
-  //  Set() method prevents duplicate button elements
+  const [btnState, setBtnState] = useState('All Orbits');
+
+  //  Set() method prevents duplicate button elements --> [ "Low", "Medium", "High" ]
   const displaySats = [...new Set(satData.map((data) => data.orbitType))];
 
-const filterByType = (currentType) => {
+  const filterByType = (clickedOrbitType) => {
 
-  const displaySats = satData.filter((newSatDisplay) => {
-     return newSatDisplay.orbitType === currentType;
-  });
+    const filteredSatsByClickedOrbitType = satData.filter((satellite) =>
+      satellite.orbitType === clickedOrbitType
+    );
 
-  setSat(displaySats);
-};
+    setSat(filteredSatsByClickedOrbitType);
+  };  //  updates satData state with satellite data of button-clicked orbit-type
+
+  const updateBtnState = (btnType) => {
+    setBtnState(btnType);
+  };
 
   return (
     <>
-      <Banner />
-      <Buttons
-        filterByType={filterByType}
-        setSat={setSat}
-        displaySats={displaySats}
-      />
-      <Table sat={sat} />
+      <div class="header">
+        <img src={satellite} alt="satellite image" id="satellite" />
+        <img src={moon} alt="moon image" id="moon" />
+        <Banner />
+        <Buttons
+          filterByType={filterByType}
+          setSat={setSat}
+          displaySats={displaySats}
+          updateBtnState={updateBtnState}
+        />
+      </div>
+
+      <Table sat={sat} btnState={btnState} />
     </>
   );
 }
@@ -38,13 +54,13 @@ export default App;
 
 /*
 NEED:
-  buttons that render filterable table of satellites
+  four buttons that filter & render rows of satellite data for LOW, MEDIUM, HIGH, or ALL orbits
 
-  table columns:
-    NAME -- SATELLITE TYPE -- LAUNCH DATE -- STATUS (ACTIVE || INACTIVE)
+  columns:  NAME -- SATELLITE TYPE -- LAUNCH DATE -- STATUS (ACTIVE || INACTIVE)
 
-  four satellite-rendering buttons:
-    on button-click, filters & renders in table: LOW, MEDIUM, HIGH, or ALL orbit satellites
-
-  presentable styling
+  styling:
+    clicked-button background-color: dark red
+    active status text color: dark green
+    inactive status text color: brick red
+    unique text colors for each satellite-type
 */
