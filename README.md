@@ -1,18 +1,3 @@
-----------------------------
-Wednesday:  REACT EXERCISES!
-Thursday:   BEGIN   PROJECT #6
-----------------------------
-Friday:     
-Saturday:   
-Sunday:     
-----------------------------
-Monday:     
-Tuesday:    
-Wednesday:  
-Thursday:   END   PROJECT #6
-----------------------------
-
-
 # Graded Assignment 6: Orbit Report
 
 Using Node 18.16.10
