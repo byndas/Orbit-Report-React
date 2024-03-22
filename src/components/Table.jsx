@@ -1,6 +1,5 @@
 const Table = ({ sat, btnState }) => {
-// REFACTORABLE USING STATE?
-// date: "N/A" breaks expected results if sorting dates first
+
   const launchDates = (a, b) => new Date(b.launchDate) - new Date(a.launchDate);
   const activeRecentSats = sat.filter(obj => obj.operational).sort(launchDates);
   const inactiveRecentSats = sat.filter(obj => !obj.operational).sort(launchDates);
@@ -52,6 +51,3 @@ const Table = ({ sat, btnState }) => {
 };
 
 export default Table;
-
-// NEED:
-//  on btn-click: table row state update fades in out

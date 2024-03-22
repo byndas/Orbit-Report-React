@@ -121,13 +121,13 @@ header {
 
 @keyframes drift-right {
   50% {
-    transform: translateX(-100vw);
+    transform: translateX(-90vw);
   }
 }
 
 @keyframes drift-left {
   50% {
-    transform: translateX(100vw);
+    transform: translateX(90vw);
   }
 }
 
