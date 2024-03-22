@@ -127,7 +127,7 @@ header {
 
 @keyframes drift-left {
   50% {
-    transform: translateX(90vw);
+    transform: translateX(60vw);
   }
 }
 
@@ -137,7 +137,6 @@ header {
 }
 
 #moon {
-  right: 70vw;
   height: 25vw;
   opacity: .35;
   animation: drift-left 600s linear infinite;
