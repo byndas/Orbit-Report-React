@@ -12,10 +12,9 @@ code {
     monospace;
 }
 
-html {
+/* html {
   opacity: .9;
   background-size: 100%;
   background-image: url("./orbitPhotos/orbits.png");
   background-blend-mode: color-dodge;
-  /* background-blend-mode: lighten; */
-}
+} */
