@@ -3,10 +3,8 @@ import satData from "./components/satData";
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
 import Banner from "./components/Banner";
-
 import moon from "./orbitPhotos/moon.png";
 import satellite from "./orbitPhotos/satellite.png";
-
 import "./styling.css";
 
 function App() {

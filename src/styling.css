@@ -64,6 +64,7 @@ table {
   border-collapse: collapse;
   width: 100vw;
   height: 100%;
+  z-index: 100;
 }
 
 th {
@@ -79,6 +80,7 @@ th {
 tr:hover {
   background-color: snow;
   opacity: 1;
+  z-index: 100;
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
@@ -94,6 +96,7 @@ tr:hover {
 tr {
   opacity: .7;
   animation: fade-in 1.25s;
+  z-index: 100;
 }
 
 td {
@@ -101,6 +104,7 @@ td {
   font-size: 21px;
   padding: .5%;
   width: 25vw;
+  z-index: 10;
 }
 
 header {
@@ -116,6 +120,7 @@ header {
 .header {
   background-color: #5c94ce;
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  z-index: 1;
 }
 
 
@@ -148,4 +153,8 @@ header {
   height: 15vw;
   opacity: .25;
   animation: drift-right 600s linear infinite;
+}
+
+html {
+  z-index: 1;
 }
